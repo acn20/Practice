@@ -12,7 +12,7 @@ $(function () {
 
     })
 
-    $("#rating").change(function () {
+    $(".rating[data-movie-id='105454545']").change(function () {
         $.ajax(rootUrl, {
             "method": "POST",
             "success": function () {
