@@ -167,12 +167,12 @@ Aia o pui by default
 					//de cate ori vrei sa iesi in afara folderului pentru adresa relativa pui ..\\ inainte
 				})*/
 
-				tweetElement.find(".like").click(function whenHitLike() {
+				tweetElement.find(".like").click(function() {
 					$(this).hide();
 					tweetElement.find(".dislike").show();
 				})
 
-				tweetElement.find(".dislike").click(function whenHitDisike() {
+				tweetElement.find(".dislike").click(function() {
 					$(this).hide();
 					tweetElement.find(".like").show();
 				})
@@ -266,8 +266,8 @@ Aia o pui by default
 			<div>
 				<p class="tweetContent"></p>
 				<button class="deleteTweet">Delete</button>
-				<img src="..\\resources\\hollowheart.png" width="21" height="21" class="like" onclick=whenHitLike()>
-				<img src="..\\resources\\fullheart.png" width="21" height="21" class="dislike" onclick=whenHitDislike()>
+				<img src="..\\resources\\hollowheart.png" width="21" height="21" class="like">
+				<img src="..\\resources\\fullheart.png" width="21" height="21" class="dislike">
 				<button class="comment">Comment</button>
 			</div>
 
