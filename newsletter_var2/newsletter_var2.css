@@ -1,0 +1,36 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 600%;
+}
+
+#upperMain {
+    display: flex;
+}
+
+#upperContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.upperPhotoAndTitle {
+    display: flex;
+}
+
+#lowerMain {
+    display: flex;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+}
+
+.lowerPhotoAndTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+#links {
+    display: flex;
+}
