@@ -57,9 +57,8 @@ button {
     flex-direction: column;
     z-index: 2;
     margin-left: 28px;
-    align-content: flex-end;
+    justify-content: flex-end;
     height: 100%;
-    
 }
 
 #modelNumber {
