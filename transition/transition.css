@@ -70,3 +70,7 @@ button {
 .icon {
     color: #d5001c;
 }
+
+.red-on-hover:hover {
+    color: #d5001c;
+}
