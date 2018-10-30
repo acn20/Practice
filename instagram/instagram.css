@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #f5f6f7;
+    padding: 20 0;
+    align-items: center;
+}
+
+#insta {
+    display: flex;
+    align-items: center;
+}
+
+#instagramIcon {
+    padding-right: 20px
+}
+
+#instagram {
+    padding-left: 20px;
+    border-left: 1px solid #000
+}
+
+#search {
+    display: flex;
+    align-items: center
+}
+
+.headerIcon {
+    padding: 0 20px;
+}
+
+#post {
+    margin-top: 50px;
+    border: 1px solid #f5f6f7;
+    width: 637px;
+}
+
+#iconAndName {
+    display: flex;
+    align-items: center;
+    margin: 13 10px;
+}
+
+#icon {
+    border-radius: 50%;
+}
+
+.like-and-comm {
+    padding: 10px;
+}
+
+.noOfLikes {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.comment {
+    padding: 10px;
+}

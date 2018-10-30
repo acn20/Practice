@@ -49,6 +49,7 @@ button {
     font-weight: bold;
     position: absolute;
     z-index: 2;
+    height: 100%;
 }
 
 #menu {
@@ -56,6 +57,8 @@ button {
     flex-direction: column;
     z-index: 2;
     margin-left: 28px;
+    align-content: flex-end;
+    height: 100%;
     
 }
 

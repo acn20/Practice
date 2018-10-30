@@ -14,10 +14,11 @@
 }
 
 .upperPhotoAndTitle {
+    margin: 20 0;
     display: flex;
 }
 
-#lowerMain {
+#lowerContent {
     display: flex;
 }
 
@@ -27,10 +28,17 @@
 }
 
 .lowerPhotoAndTitle {
+    margin: 20 0;
     display: flex;
     flex-direction: column;
 }
 
 #links {
     display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+#emptyDiv {
+    height: 15px;
 }
