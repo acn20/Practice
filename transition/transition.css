@@ -55,7 +55,7 @@ button {
 #menu {
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    z-index: 3;
     margin-left: 28px;
     justify-content: flex-end;
     height: 100%;
