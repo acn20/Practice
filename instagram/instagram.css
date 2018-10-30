@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 header {
     display: flex;
     justify-content: space-around;
@@ -57,4 +61,8 @@ header {
 
 .comment {
     padding: 10px;
+}
+
+.bold {
+    font-weight: bold;
 }

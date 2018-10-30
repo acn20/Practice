@@ -1,18 +1,7 @@
-margin - nu face parte din elementul in sine. inseamna ce distanta iti faci in jurul elementului tau
-border - conturul elementului
-padding - spatiul intre continutul in sine (de ex text) si border (face elementul mai mare, in jurul continutului)
+COMENZI
+pentru a modifica o variabila peste tot odata: Right click -> Rename (F2)
+pentru a modifica acelasi lucru pe mai multe linii de cod -> alt shift click
 
-CV:
-Obs - trebuie sa pun buline la listele alea
-Ma ocup de acel border
-Ma ocup ca spatiile sa fie corecte
-sa caut pe google care este prioritatea selectorilor din CSS
-sa caut pe google li inhereted from ul
-de cautat pe google:
-margin overlap css
-asterisk list-style-type
-border dotted dot spacing
-de cautat text-align
 
 
 /*selectorul div ul = elementele ul dintr-un div*/
@@ -33,6 +22,27 @@ Cand ai mai multe elemente pe un rand text-align: center ti le centreaza pe toat
 */
 
 before, after - pseudoelemente
+
+
+margin - nu face parte din elementul in sine. inseamna ce distanta iti faci in jurul elementului tau
+border - conturul elementului
+padding - spatiul intre continutul in sine (de ex text) si border (face elementul mai mare, in jurul continutului)
+
+
+
+CV:
+Obs - trebuie sa pun buline la listele alea
+Ma ocup de acel border
+Ma ocup ca spatiile sa fie corecte
+sa caut pe google care este prioritatea selectorilor din CSS
+sa caut pe google li inhereted from ul
+de cautat pe google:
+margin overlap css
+asterisk list-style-type
+border dotted dot spacing
+de cautat text-align
+
+
 
 RGB - Red Green Blue
 0 - F
