@@ -33,12 +33,12 @@ button {
     top: 0;
     left: 0;
     opacity: 0;
-    visibility: hidden;
+    display: hidden;
 }
 
 #model:hover #overlay {
     opacity: 1;
-    visibility: visible;
+    display: visible;
     transition: opacity .24s;
 }
 
@@ -78,4 +78,50 @@ button {
 
 .option {
     padding: 5 0px;
+}
+
+#firstOption {
+    opacity: 0;
+    position: absolute;
+    bottom: 20%;
+    transition-property: bottom;
+    transition-duration: .5s;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+    
+
+#secondOption {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    transition-property: bottom;
+    transition-duration: .75s;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+
+#thirdOption {
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    transition-property: bottom;
+    transition-duration: .95s;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+
+#model:hover #firstOption {
+    opacity: 1;
+    bottom: 30%;
+}
+
+#model:hover #secondOption {
+    opacity: 1;
+    bottom: 20%;
+}
+
+#model:hover #thirdOption {
+    opacity: 1;
+    bottom: 10%;
 }
