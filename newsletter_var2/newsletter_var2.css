@@ -14,7 +14,7 @@
 }
 
 .upperPhotoAndTitle {
-    margin: 20 0;
+    margin: 20px 0;
     display: flex;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .lowerPhotoAndTitle {
-    margin: 20 0;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
