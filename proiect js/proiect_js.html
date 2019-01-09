@@ -1,0 +1,80 @@
+<!--
+- validare de formular (sa ne anunte ca nu am scris ce trebuie intr-un anumit camp)
+- galerie creata sau implementata (ca in ultimul curs)
+- meniu colapsibil (cu animate)-->
+<html>
+
+<head>
+    <link href="styles/proiect_js_style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="background">
+        <header>
+
+            <div id="menuContainer">
+                <label for="abc">
+                    <img src="images/menu-icon.png" />
+                </label>
+                <input id="abc" type="checkbox" />
+                <ul>
+                    <a href="">
+                        <li>Maine Coon</li>
+                    </a>
+                    <a href="">
+                        <li>British Short Hair</li>
+                    </a>
+                    <a href="">
+                        <li>Syberian</li>
+                    </a>
+                    <a href="">
+                        <li>Norvegian Forest Cat</li>
+                    </a>
+                </ul>
+            </div>
+
+            <img src="images/cat_logo.png" />
+
+            <div id="logIn">
+                <p>Log in to see more cute pictures</p>
+                <input class="field" type="text" name="username" placeholder="username" onkeyup="mail()" />
+                <p></p>
+                <input class="field" type="password" name="password" placeholder="password" onkeyup="pass()" />
+                <p></p>
+                <input type="submit" name="submit" value="Log in" />
+            </div>
+
+        </header>
+    </div>
+
+    <div class="background">
+        <main>
+
+            <div class="galerie">
+                <img src="images/cat(1).jpg" />
+                <img src="images/cat(2).jpg" />
+                <img src="images/cat(3).jpg" />
+                <img src="images/cat.jpeg" />
+                <img src="images/cat(4).jpg" />
+            </div>
+
+        </main>
+    </div>
+
+    <div class="background">
+        <footer>
+            <a class="social-link" href="https://facebook.com" target="blank"><img src="images//facebook.jpg" /></a>
+            <a class="social-link" href="https://tweeter.com" target="blank"><img src="images//tweeter.jpg" /></a>
+            <a class="social-link" href="https://google.com" target="blank"><img src="images//google.jpg" /></a>
+            <p>For more info, please visit <a target="blank" href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></p>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/proiect_js_galerie.js"></script>
+    <script src="scripts/proiect_js_form.js"></script>
+</body>
+
+</html>
