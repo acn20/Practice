@@ -4,15 +4,41 @@
     <title>Degrees Converter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/degreesConverter.js"></script>
-    <link href="styles/degreesConverter.css" rel="stylesheet"/>
+    <link href="styles/degreesConverter.css" rel="stylesheet" />
 </head>
 
 <body>
-    <input type="radio" name="chooseDegrees" value="Celsius"/>
-    <input type="radio" name="chooseDegrees" value="Fehrenheit"/>
+    <!--<label for="Celsius">Celsius</label>
+    <input type="radio" name="chooseDegrees" value="Celsius" id="Celsius"/>
+    <label for="Fahrenheit">Fahrenheit</label>
+    <input type="radio" name="chooseDegrees" value="Fahrenheit" id="Fahrenheit"/>
     <input name="degrees" type="number" id="degrees" placeholder="Degrees"/>
-    <button id="showResult">Result</button>
-    <span id="result"></span>
+    <button id="showResult">Convert</button>
+    <span id="result"></span>-->
+
+    <div>
+    <select>
+        <option value="temperature">Temperature</option>
+        <option value="other">Other</option>
+    </select>
+    </div>
+
+    <div>
+        <input type="text" />
+        <select>
+            <option>Fahrenheit</option>
+            <option>Celsius</option>
+        </select>
+        =
+    </div>
+
+    <div>
+            <input type="text" />
+            <select>
+                <option>Celsius</option>
+                <option>Fahrenheit</option>
+            </select>
+    </div>
 </body>
 
 </html>
