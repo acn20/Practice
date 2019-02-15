@@ -16,28 +16,40 @@
     <button id="showResult">Convert</button>
     <span id="result"></span>-->
 
-    <div>
-    <select>
-        <option value="temperature">Temperature</option>
-        <option value="other">Other</option>
-    </select>
-    </div>
 
-    <div>
-        <input type="text" />
-        <select>
-            <option>Fahrenheit</option>
-            <option>Celsius</option>
-        </select>
-        =
-    </div>
-
-    <div>
-            <input type="text" />
-            <select>
-                <option>Celsius</option>
-                <option>Fahrenheit</option>
+    <div id="container">
+        <div>
+            <select id="setCategory">
+                <option value="temperature">Temperature</option>
+                <option value="other">Other</option>
             </select>
+        </div>
+
+        <div id="unitRight">
+            <div>
+                <input type="text" id="unitValue" />
+            </div>
+            <div>
+                <select id="setUnit">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                </select>
+            </div>
+        </div>
+        <span>
+            =
+        </span>
+        <div id="unitLeft">
+            <div>
+                <input type="text" id="unitValue2" />
+            </div>
+            <div>
+                <select id="setUnit2">
+                    <option value="celsius2">Celsius</option>
+                    <option value="fahrenheit2">Fahrenheit</option>
+                </select>
+            </div>
+        </div>
     </div>
 </body>
 
