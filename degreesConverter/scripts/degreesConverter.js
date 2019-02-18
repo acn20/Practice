@@ -25,11 +25,10 @@ $(function () {
         var degrees = $("#unitValue").val();
 
         if($('#setUnit option[value="celsius"]:selected')) {
-            $("#unitValue2").html(((degrees * 9 / 5) + 32));
+            $("#unitValue2").val(((degrees * 9 / 5) + 32));
         }
-
         else if($('#setUnit option[value="fahrenheit"]:selected')) {
-            $("#unitValue2").html(((degrees - 32) * 5 / 9));
+            $("#unitValue2").val(((degrees - 32) * 5 / 9));
         }
     })
 
