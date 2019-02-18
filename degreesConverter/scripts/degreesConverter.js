@@ -14,14 +14,14 @@ $(function () {
     });*/
 
     if($('#setUnit option[value="celsius"]:selected')) {
-        $('#setUnit2 option[value="fhrenheit"]:selected');
+        $('#setUnit2 option[value="fahrenheit"]:selected');
     }
 
-    else if($('#setUnit2 option[value="fhrenheit"]:selected')) {
+    else if($('#setUnit2 option[value="fahrenheit"]:selected')) {
         $('#setUnit option[value="celsius"]:selected');
     }
 
-    $("#unitValue").change(function () {
+    $("#unitValue").keydown(function () {
         var degrees = $("#unitValue").val();
 
         if($('#setUnit option[value="celsius"]:selected')) {
@@ -32,15 +32,15 @@ $(function () {
         }
     })
 
-    $("#unitValue2").change(function () {
+    $("#unitValue2").keydown(function () {
         var degrees = $("#unitValue").val();
 
         if($('#setUnit2 option[value="celsius"]:selected')) {
-            $("#unitValue").html(((degrees * 9 / 5) + 32));
+            $("#unitValue").val(((degrees * 9 / 5) + 32));
         }
 
         else if($('#setUnit2 option[value="fahrenheit"]:selected')) {
-            $("#unitValue").html(((degrees - 32) * 5 / 9));
+            $("#unitValue").val(((degrees - 32) * 5 / 9));
         }
     })
     
