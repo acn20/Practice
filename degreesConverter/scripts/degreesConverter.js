@@ -14,18 +14,18 @@ $(function () {
     });*/
 
     if($('#setUnit option[value="celsius"]:selected')) {
-        $('#setUnit2 option[value="fahrenheit"]:selected');
+        $('#setUnit2').val("fahrenheit");
     }
 
     else if($('#setUnit2 option[value="fahrenheit"]:selected')) {
-        $('#setUnit option[value="celsius"]:selected');
+        $('#setUnit').val("celsius");
     }
 
     $("#unitValue").keydown(function () {
         var degrees = $("#unitValue").val();
 
         if($('#setUnit option[value="celsius"]:selected')) {
-            $("#unitValue2").val(((degrees * 9 / 5) + 32));
+            $("#unitValue2").val(((degrees * 1.8) + 32));
         }
         else if($('#setUnit option[value="fahrenheit"]:selected')) {
             $("#unitValue2").val(((degrees - 32) * 5 / 9));
