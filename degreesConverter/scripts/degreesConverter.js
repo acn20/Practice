@@ -13,5 +13,36 @@ $(function () {
         }
     });*/
 
+    if($('#setUnit option[value="celsius"]:selected')) {
+        $('#setUnit2 option[value="fhrenheit"]:selected');
+    }
+
+    else if($('#setUnit2 option[value="fhrenheit"]:selected')) {
+        $('#setUnit option[value="celsius"]:selected');
+    }
+
+    $("#unitValue").change(function () {
+        var degrees = $("#unitValue").val();
+
+        if($('#setUnit option[value="celsius"]:selected')) {
+            $("#unitValue2").html(((degrees * 9 / 5) + 32));
+        }
+
+        else if($('#setUnit option[value="fahrenheit"]:selected')) {
+            $("#unitValue2").html(((degrees - 32) * 5 / 9));
+        }
+    })
+
+    $("#unitValue2").change(function () {
+        var degrees = $("#unitValue").val();
+
+        if($('#setUnit2 option[value="celsius"]:selected')) {
+            $("#unitValue").html(((degrees * 9 / 5) + 32));
+        }
+
+        else if($('#setUnit2 option[value="fahrenheit"]:selected')) {
+            $("#unitValue").html(((degrees - 32) * 5 / 9));
+        }
+    })
     
 })
