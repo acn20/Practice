@@ -21,9 +21,9 @@ $(function () {
         $('#setUnit').val("celsius");
     }
 
-    $("#unitValue").keydown(function () {
-        // TODO add number validation
-        var degrees = $("#unitValue").val();
+    $("#unitValue").keypress(function (event) {
+        var key = event.key;
+        var degrees = $("#unitValue").val() + key; // concatenate existing value with current key
 
         if($('#setUnit option[value="celsius"]:selected')) {
             $("#unitValue2").val(((degrees * 1.8) + 32));
