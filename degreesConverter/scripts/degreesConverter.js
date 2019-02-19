@@ -22,6 +22,7 @@ $(function () {
     }
 
     $("#unitValue").keydown(function () {
+        // TODO add number validation
         var degrees = $("#unitValue").val();
 
         if($('#setUnit option[value="celsius"]:selected')) {
