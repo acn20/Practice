@@ -1,59 +1,64 @@
 /*(0°C × 9/5) + 32 = 32°F
 (0°F − 32) × 5/9 = -17.78°C*/
 
+var convertCelsiusToFahrenheit = function(degrees) {
+    return (degrees * 1.8) + 32;
+}
+
+var convertFahrenheitToCelsius = function(degrees) {
+    return (degrees - 32) * 5/9;
+}
+
 $(function () {
-    /*$('#showResult').click(function() {
-        var radio = $('input[name="chooseDegrees"]:checked');
-        var degrees = $("#degrees").val();
+    $('#setUnit1').val("celsius");
+    $('#setUnit2').val("fahrenheit");
 
-        if(radio.val() == "Celsius") {
-            $("#result").html(((degrees * 9 / 5) + 32) + " degrees Fahrenheit");
+    var leftToRightFormula = convertCelsiusToFahrenheit;
+    var rightToLeftFormula = convertFahrenheitToCelsius;
+
+    $('#setUnit1').change(function () {
+        if ($('#setUnit1').val() == "celsius") {
+            $('#setUnit2').val("fahrenheit");
+            leftToRightFormula = convertCelsiusToFahrenheit;
+            rightToLeftFormula = convertFahrenheitToCelsius;
+        } else if ($('#setUnit1').val() == "fahrenheit") {
+            $('#setUnit2').val("celsius");
+            leftToRightFormula = convertFahrenheitToCelsius;
+            rightToLeftFormula = convertCelsiusToFahrenheit;
         }
-        else {
-            $("#result").html(((degrees - 32) * 5 / 9) + " degrees Celsius");
+    });
+
+    $('#setUnit2').change(function () {
+        if ($('#setUnit2').val() == "fahrenheit") {
+            $('#setUnit1').val("celsius");
+            leftToRightFormula = convertCelsiusToFahrenheit;
+            rightToLeftFormula = convertFahrenheitToCelsius;
+        } else if ($('#setUnit2').val() == "celsius") {
+            $('#setUnit1').val("fahrenheit");
+            leftToRightFormula = convertFahrenheitToCelsius;
+            rightToLeftFormula = convertCelsiusToFahrenheit;
         }
-    });*/
+    });
 
-
-    if ($('#setUnit option[value="celsius"]:selected'.length == 1)) {
-        $('#setUnit2').val("fahrenheit");
-    }
-
-    if ($('#setUnit option[value="fahrenheit"]:selected'.length == 1)) {
-        $('#setUnit2').val("celsius");
-    }
-
-    if ($('#setUnit2 option[value="fahrenheit"]:selected').length == 1) {
-        $('#setUnit').val("celsius");
-    }
-
-    if ($('#setUnit2 option[value="celsius"]:selected').length == 1) {
-        $('#setUnit').val("fahrenheit");
-    }
-
-    $("#unitValue").keypress(function (event) {//obiect cu proprietatea key
+    $("#unitValue1").keypress(function (event) {//obiect cu proprietatea key
         var key = event.key;//key reprezinta ce tasta a fost apasata
-        var degrees = $("#unitValue").val() + key; // concatenate existing value with current key
+        if(!parseInt(key)) {//this function returns a number only if key contains a number (key is a string)
+            return false;
+        }
 
-        if ($('#setUnit option[value="celsius"]:selected')) {
-            $("#unitValue2").val(((degrees * 1.8) + 32));
-        }
-        else if ($('#setUnit option[value="fahrenheit"]:selected')) {
-            $("#unitValue2").val(((degrees - 32) * 5 / 9));
-        }
+        var degrees = $("#unitValue1").val() + key; // concatenate existing value with current key
+        degrees = leftToRightFormula(degrees);
+
+        $("#unitValue2").val(degrees);
     })
 
     $("#unitValue2").keydown(function (event) {
         var key = event.key;
-        var degrees = $("#unitValue").val() + key;
+        var degrees = $("#unitValue1").val() + key;
 
-        if ($('#setUnit2 option[value="celsius"]:selected')) {
-            $("#unitValue").val(((degrees * 9 / 5) + 32));
-        }
-
-        else if ($('#setUnit2 option[value="fahrenheit"]:selected')) {
-            $("#unitValue").val(((degrees - 32) * 5 / 9));
-        }
+        degrees = rightToLeftFormula(degrees);
+        
+        $("#unitValue1").val(degrees);
     })
 
 })
