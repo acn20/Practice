@@ -1,5 +1,6 @@
 /*(0°C × 9/5) + 32 = 32°F
 (0°F − 32) × 5/9 = -17.78°C*/
+
 $(function () {
     /*$('#showResult').click(function() {
         var radio = $('input[name="chooseDegrees"]:checked');
@@ -18,8 +19,16 @@ $(function () {
         $('#setUnit2').val("fahrenheit");
     }
 
-    else if ($('#setUnit2 option[value="fahrenheit"]:selected').length == 1) {
+    if ($('#setUnit option[value="fahrenheit"]:selected'.length == 1)) {
+        $('#setUnit2').val("celsius");
+    }
+
+    if ($('#setUnit2 option[value="fahrenheit"]:selected').length == 1) {
         $('#setUnit').val("celsius");
+    }
+
+    if ($('#setUnit2 option[value="celsius"]:selected').length == 1) {
+        $('#setUnit').val("fahrenheit");
     }
 
     $("#unitValue").keypress(function (event) {//obiect cu proprietatea key
