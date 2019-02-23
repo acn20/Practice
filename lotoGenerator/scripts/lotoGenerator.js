@@ -1,25 +1,24 @@
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
-  }
+}
 
-$(function() {
-    $("#generateButton").click(function() {
+// [0, 1) -> x 49 -> [0, 49) + 1 => [0, 50)
+
+$(function () {
+    $("#generateButton").click(function () {
         $("#generatedNumbers").html('');
+        let numbers = [];
+        // hint: use a while loop
 
-        var x1 = getRandomIntInclusive(1, 49);
-        var x2 = getRandomIntInclusive(1, 49);
-        var x3 = getRandomIntInclusive(1, 49);
-        var x4 = getRandomIntInclusive(1, 49);
-        var x5 = getRandomIntInclusive(1, 49);
-        var x6 = getRandomIntInclusive(1, 49);
+        while (numbers.length < 6) {
+            var x = getRandomIntInclusive(1, 49);
+            if (numbers.indexOf(x) == -1) {
+                numbers.push(x);
+            }
+        }
 
-        $("#generatedNumbers").append(x1);
-        $("#generatedNumbers").append(' ' + x2);
-        $("#generatedNumbers").append(' ' + x3);
-        $("#generatedNumbers").append(' ' + x4);
-        $("#generatedNumbers").append(' ' + x5);
-        $("#generatedNumbers").append(' ' + x6);
+        for(var i = 0; i < numbers.length; i++) {
+            $("#generatedNumbers").append(' ' + numbers[i]);
+        }
     })
 })
