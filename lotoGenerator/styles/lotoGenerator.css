@@ -21,3 +21,7 @@ h2 {
     transform: translateX(-50%) translateY(-50%);
     color: #28a745;
 }
+
+.number {
+    margin-right: 25px;
+}
