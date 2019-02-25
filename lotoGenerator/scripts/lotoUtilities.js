@@ -36,4 +36,4 @@ function generateNumbers(min, max, count) {
 }
 //testez validarile, ma asigur ca array-ul returnat nu e niciodata empty, array-ul trb sa aiba fix atatea elemente cat zice count
 //ma asigur ca elem din array sunt intre min si max
-//ma asigur ca diferenta dintre min si max este mai mare sau egala cu count
+//ma asigur ca diferenta dintre min si max + 1 este mai mare sau egala cu count

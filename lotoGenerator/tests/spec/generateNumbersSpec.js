@@ -35,11 +35,11 @@ describe("generateNumbers Tests", function () {
         })
     })
 
-    describe("When the difference between min and max is less than count", function () {
+    describe("When the number of numbers is less than count", function () {
         it("Throws error", function () {
             var min = 3;
             var max = 5;
-            var count = 3;
+            var count = 4;
             expect(function () { generateNumbers(min, max, count) }).toThrow();
         })
     })
@@ -50,7 +50,7 @@ describe("generateNumbers Tests", function () {
             var max = 5;
             count = 1;
             var result = generateNumbers(min, max, count);
-            expect(result).toBe();
+            expect(result == min || result == max).toBe(true);
         })
     })
 
@@ -60,7 +60,21 @@ describe("generateNumbers Tests", function () {
             var max = 104;
             count = 5;
             var result = generateNumbers(min, max, count);
-            expect(result).toBe();
+            for(var i = 0; i < result.length; i++) {
+                expect(result[i] >= min && result[i] <= max).toBe(true);
+            }
+        })
+    })
+
+    describe("When the number of numbers is equal to count", function () {
+        it("Gives a result between min and max", function () {
+            var min = 1;
+            var max = 10;
+            count = 10;
+            var result = generateNumbers(min, max, count);
+            for(var i = 0; i < result.length; i++) {
+                expect(result[i] >= min && result[i] <= max).toBe(true);
+            }
         })
     })
 })
