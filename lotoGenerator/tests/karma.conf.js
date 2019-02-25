@@ -15,7 +15,8 @@ module.exports = function(config) {
   
       // list of files / patterns to load in the browser
       files: [
-        'test/**/*Spec.js'
+        '../scripts/lotoUtilities.js',
+        'spec/**/*Spec.js'
       ],
   
   
