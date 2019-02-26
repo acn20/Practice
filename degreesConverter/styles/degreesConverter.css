@@ -19,3 +19,7 @@
 #unitLeft, #unitRight {
     display: inline-block;
 }
+
+#pressureDropdown1, #pressureDropdown2, #energyDropdown1, #energyDropdown2 {
+    display: none;
+}

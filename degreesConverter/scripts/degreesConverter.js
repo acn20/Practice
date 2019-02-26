@@ -10,6 +10,23 @@ var convertFahrenheitToCelsius = function (degrees) {
 }
 
 $(function () {
+    $("#setCategory").change(function() {
+        if($("#setCategory").val() == "temperature") {
+            $("#temperatureDropdown1").show();
+            $("#temperatureDropdown2").show();
+        }
+
+        if($("#setCategory").val() == "pressure") {
+            $("#pressureDropdown1").show();
+            $("#pressureDropdown2").show();
+        }
+
+        if($("#setCategory").val() == "energy") {
+            $("#energyDropdown1").show();
+            $("#energyDropdown2").show();
+        }
+    })
+
     $('#setUnit1').val("celsius");
     $('#setUnit2').val("fahrenheit");
 
