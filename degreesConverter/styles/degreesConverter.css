@@ -10,7 +10,7 @@
     border: 1px solid #ccc;
 }
 
-#setUnit1, #setUnit2 {
+.setUnit1, .setUnit2 {
     padding: 7px 105px 7px 5px;
     background: #f5f5f5;
     border: 1px solid #ccc;
