@@ -9,6 +9,7 @@ din Pa in Atm divide the pressure value by 101325
 din Atm in Pa multiply the pressure value by 101325
 */
 
+// CREATE ONE TEST FILE PER FUNCTION
 var convertCelsiusToFahrenheit = function (degrees) {
     return (degrees * 1.8) + 32;
 }
@@ -17,50 +18,56 @@ var convertFahrenheitToCelsius = function (degrees) {
     return (degrees - 32) * 5 / 9;
 }
 
-var convertJouleToKilocalorie = function (degrees) {
-    return (degrees / 4184);
+var convertJouleToKilocalorie = function (units) {
+    return (units / 4184);
 }
 
-var convertKilocalorieToJoule = function (degrees) {
-    return (degrees * 4184);
+var convertKilocalorieToJoule = function (units) {
+    return (units * 4184);
 }
 
-var ConvertPascalToAtmosphere = function (degrees) {
-    return (degrees / 101325);
+var convertPascalToAtmosphere = function (units) {
+    return (units / 101325);
 }
 
-var ConvertAtmosphereToPascal = function (degrees) {
-    return (degrees * 101325);
+var convertAtmosphereToPascal = function (units) {
+    return (units * 101325);
+}
+
+var converterOptions = {
+    "temperature": {
+        "values": ["Celsius", "Fahrenheit"],
+        "formulas": {
+            "Celsius": {
+                "Fahrenheit": convertCelsiusToFahrenheit
+            },
+            "Fahrenheit": {
+                "Celsius": convertFahrenheitToCelsius
+            }
+        }
+    },
+    "pressure":{
+        "values": [ "Pascal", "Atmosphere" ],
+        "formulas": {
+            "Pascal": {
+                "Athmosphere": ConvertPascalToAtmosphere
+            },
+            "Atmosphere": {
+                "Pascal": ConvertAtmosphereToPascal
+            }
+        }
+    },
 }
 
 $(function () {
     $("#setCategory").change(function() {
-        if($("#setCategory").val() == "temperature") {
-            $("#temperatureDropdown1").show();
-            $("#temperatureDropdown2").show();
-            $("#energyDropdown1").hide();
-            $("#energyDropdown2").hide();
-            $("#pressureDropdown1").hide();
-            $("#pressureDropdown2").hide();
-        }
+        var selectedValue = $("#setCategory").val(); // selectedValue is either temperature, energy or pressure
+        var options = converterOptions[selectedValue].values;
 
-        else if($("#setCategory").val() == "pressure") {
-            $("#pressureDropdown1").show();
-            $("#pressureDropdown2").show();
-            $("#temperatureDropdown1").hide();
-            $("#temperatureDropdown2").hide();
-            $("#energyDropdown1").hide();
-            $("#energyDropdown2").hide();
-        }
+        // now use the options variable to populate both dropdowns
 
-        else if($("#setCategory").val() == "energy") {
-            $("#energyDropdown1").show();
-            $("#energyDropdown2").show();
-            $("#temperatureDropdown1").hide();
-            $("#temperatureDropdown2").hide();
-            $("#pressureDropdown1").hide();
-            $("#pressureDropdown2").hide();
-        }
+        $('.setUnit1').clear();
+        $('.setUnit2').clear();
     })
 
     $('.setUnit1').val("celsius");
@@ -73,15 +80,15 @@ $(function () {
         $("#unitValue1").val("");
         $("#unitValue2").val("");
 
-        if ($('.setUnit1').val() == "celsius") {
-            $('.setUnit2').val("fahrenheit");
-            leftToRightFormula = convertCelsiusToFahrenheit;
-            rightToLeftFormula = convertFahrenheitToCelsius;
-        } else if ($('.setUnit1').val() == "fahrenheit") {
-            $('.setUnit2').val("celsius");
-            leftToRightFormula = convertFahrenheitToCelsius;
-            rightToLeftFormula = convertCelsiusToFahrenheit;
-        }
+        var category = $('#setCategory').val();
+        var unit1 = $('.setUnit1').val();
+        // check converterOptions[value].values and set .setUnit2 to the any value that is not the same
+        // as the one you selected in setUnit1. YOU MUST DO SOMETHING LIKE $('.setUnit2').val(someOtherUnit);
+        var unit2 = $('.setUnit2').val(); // READ THE COMMENT ABOVE
+
+        // then
+        leftToRightFormula = converterOptions[category].formulas[unit1][unit2];
+        rightToLeftFormula = converterOptions[category].formulas[unit2][unit1];
     });
 
     $('.setUnit2').change(function () {
@@ -189,40 +196,40 @@ $(function () {
             return false;
         }
 
-        var degrees = $("#unitValue1").val() + key; // concatenate existing value with current key
-        degrees = leftToRightFormula(degrees);
+        var units = $("#unitValue1").val() + key; // concatenate existing value with current key
+        units = leftToRightFormula(units);
 
-        $("#unitValue2").val(degrees);
+        $("#unitValue2").val(units);
     })
 
     $("#unitValue1").on('input', function () {
-        var degrees = $("#unitValue1").val();
-        if (degrees == "") {
+        var units = $("#unitValue1").val();
+        if (units == "") {
             $("#unitValue2").val("");
         }
         else {
-            degrees = leftToRightFormula(degrees);
-            $("#unitValue2").val(degrees);
+            units = leftToRightFormula(units);
+            $("#unitValue2").val(units);
         }
     })
 
     $("#unitValue2").keydown(function (event) {
         var key = event.key;
-        var degrees = $("#unitValue2").val() + key;
+        var units = $("#unitValue2").val() + key;
 
-        degrees = rightToLeftFormula(degrees);
+        units = rightToLeftFormula(units);
 
-        $("#unitValue1").val(degrees);
+        $("#unitValue1").val(units);
     })
 
     $("#unitValue2").on('input', function () {
-        var degrees = $("#unitValue2").val();
-        if (degrees == "") {
+        var units = $("#unitValue2").val();
+        if (units == "") {
             $("#unitValue1").val("");
         }
         else {
-            degrees = rightToLeftFormula(degrees);
-            $("#unitValue1").val(degrees);
+            units = rightToLeftFormula(units);
+            $("#unitValue1").val(units);
         }
     })
 
@@ -273,40 +280,40 @@ $(function () {
             return false;
         }
 
-        var degrees = $("#unitValue1").val() + key; // concatenate existing value with current key
-        degrees = leftToRightFormula(degrees);
+        var units = $("#unitValue1").val() + key; // concatenate existing value with current key
+        units = leftToRightFormula(units);
 
-        $("#unitValue2").val(degrees);
+        $("#unitValue2").val(units);
     })
 
     $("#unitValue1").on('input', function () {
-        var degrees = $("#unitValue1").val();
-        if (degrees == "") {
+        var units = $("#unitValue1").val();
+        if (units == "") {
             $("#unitValue2").val("");
         }
         else {
-            degrees = leftToRightFormula(degrees);
-            $("#unitValue2").val(degrees);
+            units = leftToRightFormula(units);
+            $("#unitValue2").val(units);
         }
     })
 
     $("#unitValue2").keydown(function (event) {
         var key = event.key;
-        var degrees = $("#unitValue2").val() + key;
+        var units = $("#unitValue2").val() + key;
 
-        degrees = rightToLeftFormula(degrees);
+        units = rightToLeftFormula(units);
 
-        $("#unitValue1").val(degrees);
+        $("#unitValue1").val(units);
     })
 
     $("#unitValue2").on('input', function () {
-        var degrees = $("#unitValue2").val();
-        if (degrees == "") {
+        var units = $("#unitValue2").val();
+        if (units == "") {
             $("#unitValue1").val("");
         }
         else {
-            degrees = rightToLeftFormula(degrees);
-            $("#unitValue1").val(degrees);
+            units = rightToLeftFormula(units);
+            $("#unitValue1").val(units);
         }
     })
 
