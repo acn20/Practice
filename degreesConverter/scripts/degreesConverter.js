@@ -10,29 +10,6 @@ din Atm in Pa multiply the pressure value by 101325
 */
 
 // CREATE ONE TEST FILE PER FUNCTION
-var convertCelsiusToFahrenheit = function (degrees) {
-    return (degrees * 1.8) + 32;
-}
-
-var convertFahrenheitToCelsius = function (degrees) {
-    return (degrees - 32) * 5 / 9;
-}
-
-var convertJouleToKilocalorie = function (units) {
-    return (units / 4184);
-}
-
-var convertKilocalorieToJoule = function (units) {
-    return (units * 4184);
-}
-
-var convertPascalToAtmosphere = function (units) {
-    return (units / 101325);
-}
-
-var convertAtmosphereToPascal = function (units) {
-    return (units * 101325);
-}
 
 var converterOptions = {
     "temperature": {
@@ -50,10 +27,10 @@ var converterOptions = {
         "values": [ "Pascal", "Atmosphere" ],
         "formulas": {
             "Pascal": {
-                "Athmosphere": ConvertPascalToAtmosphere
+                "Athmosphere": convertPascalToAtmosphere
             },
             "Atmosphere": {
-                "Pascal": ConvertAtmosphereToPascal
+                "Pascal": convertAtmosphereToPascal
             }
         }
     },
@@ -157,7 +134,7 @@ $(function () {
     $('.setUnit1').val("pascal");
     $('.setUnit2').val("atmosphere");
 
-    var leftToRightFormula = ConvertPascalToAtmosphere;
+    var leftToRightFormula = convertPascalToAtmosphere;
     var rightToLeftFormula = convertAtmosphereToPascal;
 
     $('.setUnit1').change(function () {
@@ -241,7 +218,7 @@ $(function () {
     $('.setUnit1').val("joule");
     $('.setUnit2').val("kilocalorie");
 
-    var leftToRightFormula = ConvertJouleToKilocalorie;
+    var leftToRightFormula = convertJouleToKilocalorie;
     var rightToLeftFormula = convertKilocalorieToJoule;
 
     $('.setUnit1').change(function () {
