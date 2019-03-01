@@ -1,0 +1,22 @@
+#region, #number, #letters {
+    outline: none;
+    display: inline-block;
+    width: 40px;
+}
+
+#region {
+    border-right: 0px;
+    margin-right: 0;
+}
+
+#number {
+    border-right: 0;
+    border-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#letters {
+    border-left: 0;
+    margin-left: 0;
+}
