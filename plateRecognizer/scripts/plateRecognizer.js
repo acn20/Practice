@@ -1,51 +1,24 @@
-var plateNumbers = [{
-    region: "AB",
-    number: 999,
-    letters: EXS
-}, {
-    region: "IF",
-    number: 349,
-    letters: RFB
-},
-{
-    region: "SC",
-    number: 999,
-    letters: RBS
-},
-{
-    region: "BI",
-    number: 999,
-    letters: ODV
-},
-{
-    region: "CJ",
-    number: 999,
-    letters: AMC
-},
-{
-    region: "TI",
-    number: 999,
-    letters: MDA
-},
-{
-    region: "BU",
-    number: 999,
-    letters: QMD
-}]
+var counties = ["AB", "AR", "AG", "BC", "BH", "B", "CS", "IL", "IF", "TR", "TM"]
+var countiesFull = ["Alba", "Arad", "Arges", "Bacau", "Bihor", "Bucuresti", "Caras-Severin", "Ialomita", "Ilfov", "Transilvania", "Timis"]
 
 $(function () {
     $("#check").click(function () {
-        if ($("#region").val().length == 2 && $("#number").val().length == 3 && $("#letters").val().length == 3) {
-            $("#message").html("Valid plate number");
-            //if (!parseInt($("#number").val())) {//this function returns a number only if the argument contains a number (key is a string)
-            //    return false
-            //};
-        }
+        if ($("#number").val().length == 3 && $("#letters").val().length == 3) {
+            for (var i = 0; i < counties.length; i++) {
+                if (counties[i] == $("#region").val()) {
+                    $("#message").html("Valid plate number from " + countiesFull[i]);
+                    //if (!parseInt($("#number").val())) {//this function returns a number only if the argument contains a number (key is a string)
+                    //    return false
+                    //};
+                }
 
-        for (var i = 0; i < plateNumbers.length; i++) {
-            if (plateNumbers[i].region == $("#region").val()) {
-
+                else {
+                    $("#message").html("Invalid plate number");
+                }
             }
+        }
+        else {
+            $("#message").html("Invalid plate number");
         }
     })
 })
