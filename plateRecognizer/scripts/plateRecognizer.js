@@ -3,6 +3,7 @@ var countiesFull = ["Alba", "Arad", "Arges", "Bacau", "Bihor", "Bucuresti", "Car
 
 $(function () {
     $("#check").click(function () {
+        var count = 0;
         if ($("#number").val().length == 3 && $("#letters").val().length == 3) {
             for (var i = 0; i < counties.length; i++) {
                 if (counties[i] == $("#region").val()) {
@@ -10,10 +11,12 @@ $(function () {
                     //if (!parseInt($("#number").val())) {//this function returns a number only if the argument contains a number (key is a string)
                     //    return false
                     //};
+                    count++;
                 }
+            }
 
-                else {
-                }
+            if (count == 0) {
+                $("#message").html("Invalid plate number");
             }
         }
         else {
