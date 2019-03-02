@@ -1,51 +1,30 @@
-var plateNumbers = [{
-    region: "AB",
-    number: 999,
-    letters: EXS
-}, {
-    region: "IF",
-    number: 349,
-    letters: RFB
-},
-{
-    region: "SC",
-    number: 999,
-    letters: RBS
-},
-{
-    region: "BI",
-    number: 999,
-    letters: ODV
-},
-{
-    region: "CJ",
-    number: 999,
-    letters: AMC
-},
-{
-    region: "TI",
-    number: 999,
-    letters: MDA
-},
-{
-    region: "BU",
-    number: 999,
-    letters: QMD
-}]
+var counties = ["AB", "AR", "AG", "BC", "BH", "BN", "B", "BT", "BR", "BV", "BZ", "CL", "CS", "CJ", "CV", "IL", "IF", "TR", "TM", "MM", "CT", "IS", "DB", "DJ", "GL", "GR", "GJ", "HR", "HD", "MH", "NT", "OT", "PH", "SM", "SJ", "SB", "SV", "TL", "VS", "VL", "VN"]
+var countiesFull = {
+    "AB": "Alba", "AR": "Arad", "AG": "Arges", "BC": "Bacau", "BH": "Bihor", "BN": "Bistrita-Basaud", "B": "Bucuresti", "BT": "Botosani",
+    "BR": "Braila", "BV": "Brasov", "BZ": "Buzau", "CL": "Calarasi", "CS": "Caras-Severin", "CJ": "Cluj", "CV": "Covasna", "IL": "Ialomita", "IF": "Ilfov", "TR": "Teleorman", "TM": "Timis", "MM": "Maramures", "CT": "Constanta", "IS": "Iasi", "DB": "Dambovita", "DJ": "Dolj", "GL": "Galati", "GR": "Giurgiu", "GJ": "Gorj", "HR": "Harghita", "HD": "Hunedoara", "MH": "Mehedinti", "NT": "Neamt", "OT": "Olt", "PH": "Prahova", "SM": "Satu Mare", "SJ": "Salaj", "SB": "Sibiu", "SV": "Suceava", "TL": "Tulcea", "VS": "Vaslui", "VL": "Valcea", "VN": "Vrancea"
+}
 
 $(function () {
     $("#check").click(function () {
-        if ($("#region").val().length == 2 && $("#number").val().length == 3 && $("#letters").val().length == 3) {
-            $("#message").html("Valid plate number");
-            //if (!parseInt($("#number").val())) {//this function returns a number only if the argument contains a number (key is a string)
-            //    return false
-            //};
-        }
-
-        for (var i = 0; i < plateNumbers.length; i++) {
-            if (plateNumbers[i].region == $("#region").val()) {
-
+        var count = 0;
+        var introducedCounty = $("#region").val();
+        if ($("#number").val().length == 3 && $("#letters").val().length == 3) {
+            for (var i = 0; i < counties.length; i++) {
+                if (counties[i] == introducedCounty) {
+                    $("#message").html("Valid plate number from " + countiesFull[introducedCounty]);
+                    //if (!parseInt($("#number").val())) {//this function returns a number only if key contains a number (key is a string)
+                    //    return false
+                    //};
+                    count++;
+                }
             }
+
+            if (count == 0) {
+                $("#message").html("Invalid plate number");
+            }
+        }
+        else {
+            $("#message").html("Invalid plate number");
         }
     })
 })
