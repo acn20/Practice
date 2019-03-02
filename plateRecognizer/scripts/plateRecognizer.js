@@ -13,7 +13,6 @@ $(function () {
                 }
 
                 else {
-                    $("#message").html("Invalid plate number");
                 }
             }
         }
