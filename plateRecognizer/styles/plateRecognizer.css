@@ -20,3 +20,7 @@
     border-left: 0;
     margin-left: 0;
 }
+
+.invalid {
+    border: 1px solid #E57373;
+}

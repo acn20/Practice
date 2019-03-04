@@ -7,6 +7,27 @@ var countiesFull = {
 }
 
 $(function () {
+
+    $("#number").on('input', function () {
+        if ($("#number").val().length != 3) {
+            $("#number").addClass("invalid");
+        }
+
+        else {
+            $("#number").removeClass("invalid");
+        }
+    })
+
+    $("#letters").on('input', function () {
+        if ($("#letters").val().length != 3) {
+            $("#letters").addClass("invalid");
+        }
+
+        else {
+            $("#letters").removeClass("invalid");
+        }
+    })
+
     $("#check").click(function () {
         // var isValidCounty = false;
         var introducedCounty = $("#region").val();
@@ -17,7 +38,7 @@ $(function () {
         }
 
         var county = countiesFull[introducedCounty];
-        if(county == null) {
+        if (county == null) {
             $("#message").html("Invalid plate number");
             return;
         }
