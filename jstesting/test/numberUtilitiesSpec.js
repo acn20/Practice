@@ -7,7 +7,7 @@
 //when number is 10001 and greater
 //when number is -1 and lower
 
-decribe("isPrime tests", function () {
+describe("isPrime tests", function () {
     describe("When number is negative", function () {
         it("Throws error", function () {
             var n = -3;
@@ -16,7 +16,7 @@ decribe("isPrime tests", function () {
         })
     })
 
-    describe("When number is less than 2", function () {
+    describe("When number is 1", function () {
         it("Returns false", function () {
             var n = 1;
             var result = isPrime(n);
@@ -25,7 +25,7 @@ decribe("isPrime tests", function () {
         })
     })
 
-    describe("When number is less than 2", function () {
+    describe("When number is zero", function () {
         it("Returns false", function () {
             var n = 0;
             var result = isPrime(n);
