@@ -25,6 +25,15 @@ decribe("isPrime tests", function () {
         })
     })
 
+    describe("When number is less than 2", function () {
+        it("Returns false", function () {
+            var n = 0;
+            var result = isPrime(n);
+
+            expect(result).toBe(false);
+        })
+    })
+
     describe("When number is 2", function () {
         it("Returns true", function () {
             var n = 2;

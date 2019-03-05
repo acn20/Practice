@@ -1,4 +1,6 @@
 // var counties = ["AB", "AR", "AG", "BC", "BH", "BN", "B", "BT", "BR", "BV", "BZ", "CL", "CS", "CJ", "CV", "IL", "IF", "TR", "TM", "MM", "CT", "IS", "DB", "DJ", "GL", "GR", "GJ", "HR", "HD", "MH", "NT", "OT", "PH", "SM", "SJ", "SB", "SV", "TL", "VS", "VL", "VN"]
+//sa validez si ca la comp de nr sunt numai nr si la cealalta numai litere
+//fac o functie validate number component si una validate letter component; ambele primesc ca parametru un string (continutul acelui input) si returneaza true sau false (verific litera cu litera)
 var countiesFull = {
     "AB": "Alba", "AR": "Arad", "AG": "Arges", "BC": "Bacau", "BH": "Bihor", "BN": "Bistrita-Basaud", "B": "Bucuresti", "BT": "Botosani",
     "BR": "Braila", "BV": "Brasov", "BZ": "Buzau", "CL": "Calarasi", "CS": "Caras-Severin", "CJ": "Cluj", "CV": "Covasna", "IL": "Ialomita",
