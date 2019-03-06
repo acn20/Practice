@@ -1,0 +1,10 @@
+#doors {
+    width: 60%;
+    margin: 125px auto 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+}
