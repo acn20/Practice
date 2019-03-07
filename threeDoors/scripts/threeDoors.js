@@ -52,7 +52,6 @@ $(function () {
         }
 
         else {
-            winnderDoor = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
             $("#message").html("YOU GOT ONE MORE CHANCE");
 
             $(".door").click(function () {
