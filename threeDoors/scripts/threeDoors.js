@@ -6,20 +6,20 @@ $(function () {
 
     $(".door").click(function () {
         if($(this).attr("data-id") == winnerDoor) {
-            $("h2").html("YOU WON");;
+            $("#message").html("YOU WON");;
         }
 
         else {
             winnderDoor = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-            $("h2").html("YOU GOT ONE MORE CHANCE");
+            $("#message").html("YOU GOT ONE MORE CHANCE");
 
             $(".door").click(function () {
                 if($(this).attr("data-id") == winnerDoor) {
-                    $("h2").html("YOU WON");;
+                    $("#message").html("YOU WON");;
                 }
 
                 else {
-                    $("h2").html("YOU LOST");;
+                    $("#message").html("YOU LOST");;
                 }
             })
         }
