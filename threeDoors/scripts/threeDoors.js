@@ -5,8 +5,8 @@ $(function () {
     var winnerDoor = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 
     $(".door").click(function () {
-        if($(this).style.dataId == winnerDoor) {
-            return "You WON";
+        if($(this).attr("data-id") == winnerDoor) {
+            $("h2").html("YOU WON");;
         }
 
         else {
@@ -14,12 +14,12 @@ $(function () {
             $("h2").html("YOU GOT ONE MORE CHANCE");
 
             $(".door").click(function () {
-                if($(this).style.dataId == winnerDoor) {
-                    return "You WON";
+                if($(this).attr("data-id") == winnerDoor) {
+                    $("h2").html("YOU WON");;
                 }
 
                 else {
-                    return "YOU LOST";
+                    $("h2").html("YOU LOST");;
                 }
             })
         }

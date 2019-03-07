@@ -5,6 +5,10 @@
     justify-content: space-between;
 }
 
+.door:hover {
+    cursor: pointer;
+}
+
 h2 {
     text-align: center;
 }
