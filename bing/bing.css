@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background-image: url("img/panorama.jpg");
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}
+
+header {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a:visited, header a:link {
+    color: #fff;
+}
+
+
+header ul {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-between;
+}
+
+main a:visited, main a:link {
+    color: #eee;
+}
+
+#logo {
+    width: 55px;
+}
+
+#bing {
+    color: #fff;
+    font-size: 40px;
+}
+
+#footerContainer {
+    background: #444;
+}
+
+footer {
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a:visited, footer a:link {
+    color: #aaa;
+}
+
+footer ul {
+    display: flex;
+}
