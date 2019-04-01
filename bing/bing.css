@@ -9,8 +9,14 @@ ul {
     list-style: none;
 }
 
-input {
+#upperMain {
+    margin-top: 85px;
+    margin-left: 85px;
+}
+
+#upperMain input {
     outline: none;
+    padding: 15px 195px;
 }
 
 header {
@@ -42,6 +48,11 @@ main {
     flex-direction: column;
     height: 600px;
     justify-content: space-between;
+}
+
+#upperMain, #lowerMain {
+    display: flex;
+    align-items: center;
 }
 
 main a:visited, main a:link {
