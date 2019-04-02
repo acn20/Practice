@@ -1,5 +1,5 @@
 $(function () {
-    $("input").change(function () {
-        $("#searches").append($("input"));
+    $("#search").change(function () {
+        $("#searches").prepend($("#search"));
     })
 })
