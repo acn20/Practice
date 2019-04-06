@@ -1,7 +1,15 @@
 <!--cand scrii ceva 
 sa-ti apara sugestii sub input
 si memoreaza ce ai cautat
-ultimele 5 cautari de exemplu-->
+ultimele 5 cautari de exemplu
+-salvez toate cautarile intr-un arrway
+-fac eu o lista de sugestii
+
+-cand inputul e gol si dau click pe el imi apare lista de history (numai atunci) (cand dau click fundalul se intuneca)
+-cand dau refresh sa se puna cursorul automat in input
+-cand scriu o litera ma uit la lista de sugestii si iau toate cuv care incep cu litera aia, cand scriu urmatoarea litera ma uit la lista pe care am creat-o adineaori si iau din lista AIA cuvintele care raman
+-o sa am nevoie de o functie cu 2 parametri (text si lista) si returneaza alta lista (sugestiile filtrate)
+-->
 <html>
 
 <head>
@@ -11,6 +19,7 @@ ultimele 5 cautari de exemplu-->
 </head>
 
 <body>
+
     <div id="headerContainer">
         <header>
             <ul>
@@ -50,10 +59,10 @@ ultimele 5 cautari de exemplu-->
             <div id="upperMain">
                 <img src="img/BingLogo.png" id="logo" />
                 <span id="bing">Bing</span>
-                <input id="search" />
+                <input id="searchInput" />
                 <p id="searches"></p>
                 <a href=""><i class="fas fa-camera"></i></a>
-                <a href=""><i class="fas fa-search"></i></a>
+                <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
 
             <div id="lowerMain">
@@ -77,6 +86,8 @@ ultimele 5 cautari de exemplu-->
             <a href="">&copy 2019 Microsoft</a>
         </footer>
     </div>
+
+    <div id="#dark"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="bing.js"></script>
