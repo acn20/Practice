@@ -23,14 +23,23 @@ ul {
     margin-left: 85px;
 }
 
-#upperMain input {
+#searchInput {
     outline: none;
     border: 0;
     padding: 0;
+    padding: 15px 380px 15px 10px;
+}
+
+#searchButton {
+    border: 0;
+    background: #fff;
 }
 
 #inputContainer {
-    padding: 15px 380px 15px 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
