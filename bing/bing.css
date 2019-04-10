@@ -60,6 +60,8 @@ header {
     color: #fff;
     justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 60px;
 }
 
 header a:visited, header a:link {
@@ -102,6 +104,20 @@ main a:visited, main a:link {
 #bing {
     color: #fff;
     font-size: 40px;
+    margin-right: 20px;
+}
+
+.info-buttons {
+    float: left;
+    width: 50px;
+    height: 30px;
+    opacity: 0.5;
+    background: #000;
+    margin-left: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    line-height: 30px;
+    text-align: center;
 }
 
 #footerContainer {
@@ -113,6 +129,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 60px;
 }
 
 footer a:visited, footer a:link {

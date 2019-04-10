@@ -5,27 +5,28 @@ $(function () {
     $("#searchInput").focus();
 
     $("#searchButton").click(function () {
-        history.push($("#searchInput").html());
-        $("#searchInput").html("");
+        history.push($("#searchInput").val());
+        $("#searchInput").val("");
     })
 
     $("#searchInput").click(function () {
         $("#dark").show();
+        $("#searches").empty();
         for(var i=0; i < history.length; i++) {
-            $("#searches").prepend(history[i]);
+            $("#searches").prepend(history[i]);//aici adaug un element cu prepend (cu clone, un element ascuns pe care il tot clonez)
         }
     })
 
     $("#searchInput").change(function () {
 
         for (var i = 0; i < suggestions.length; i++) {
-            if ($("#searchInput").html()[0] == suggestions[i][0]) {
+            if ($("#searchInput").val()[0] == suggestions[i][0]) {
                 $("#searches").prepend(suggestions[i]);
             }
         }
 
         for (var i = 0; i < history.length; i++) {
-            if ($("#searchInput").html()[0] == history[i][0]) {
+            if ($("#searchInput").val()[0] == history[i][0]) {
                 $("#searches").prepend(history[i]);
             }
         }

@@ -9,6 +9,8 @@ ultimele 5 cautari de exemplu
 -cand dau refresh sa se puna cursorul automat in input
 -cand scriu o litera ma uit la lista de sugestii si iau toate cuv care incep cu litera aia, cand scriu urmatoarea litera ma uit la lista pe care am creat-o adineaori si iau din lista AIA cuvintele care raman
 -o sa am nevoie de o functie cu 2 parametri (text si lista) si returneaza alta lista (sugestiile filtrate)
+fac in searches cu clone fiecare element din history si din sugestii
+pun iconita de bing pe tab
 -->
 <html>
 
@@ -70,9 +72,9 @@ ultimele 5 cautari de exemplu
             </div>
 
             <div id="lowerMain">
-                <a href=""><i class="fas fa-angle-left"></i></a>
-                <a href=""><i class="fas fa-angle-right"></i></a>
-                <a href=""><i class="fas fa-map-marker-alt"></i></a>
+                <a href=""><div class="info-buttons"><i class="fas fa-angle-left"></i></div></a>
+                <a href=""><div class="info-buttons"><i class="fas fa-angle-right"></i></div></a>
+                <a href=""><div class="info-buttons"><i class="fas fa-map-marker-alt"></i></div></a>
             </div>
         </main>
     </div>
@@ -91,10 +93,11 @@ ultimele 5 cautari de exemplu
         </footer>
     </div>
 
-    <div id="#dark"></div>
+    <div id="dark"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="bing.js"></script>
+    <script src="bingUtilities.js"></script>
 </body>
 
 </html>
