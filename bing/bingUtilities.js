@@ -1,4 +1,4 @@
-function filtredSuggestions (text, list) {
+function filtredSuggestions(text, list) {
     var filteredSuggestionsList = [];
 
     for(var i = 0; i < list.length; i++) {
@@ -9,4 +9,3 @@ function filtredSuggestions (text, list) {
 
     return filteredSuggestionsList;
 }
-//folosesc functia asta intai pentru prima litera, apoi pentru urmatoarele 2 samd, parca!

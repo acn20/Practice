@@ -1,7 +1,7 @@
 $(function () {
     var suggestions = ["How to stop a cold from coming", "What exercices are best", "When does the festival happen"];
     var history = [];
-    
+
     $("#searchInput").focus();
 
     $("#searchButton").click(function () {
@@ -12,23 +12,24 @@ $(function () {
     $("#searchInput").click(function () {
         $("#dark").show();
         $("#searches").empty();
-        for(var i=0; i < history.length; i++) {
-            $("#searches").prepend(history[i]);//aici adaug un element cu prepend (cu clone, un element ascuns pe care il tot clonez)
+        for (var i = 0; i < history.length; i++) {
+            var searched = $("#searched").clone();
+            searched.attr("id", null);
+            searched.html(history[i]);
+            $("#searches").prepend(searched);
         }
     })
 
     $("#searchInput").change(function () {
+        $("#suggestions").html('');
+        var value = $("#searchInput").val();
+        var filtredList = filtredSuggestions(value, suggestions);
 
-        for (var i = 0; i < suggestions.length; i++) {
-            if ($("#searchInput").val()[0] == suggestions[i][0]) {
-                $("#searches").prepend(suggestions[i]);
-            }
-        }
-
-        for (var i = 0; i < history.length; i++) {
-            if ($("#searchInput").val()[0] == history[i][0]) {
-                $("#searches").prepend(history[i]);
-            }
+        for (var i = 0; i < filtredList.length; i++) {
+            var filtredSuggestion = $("#filtredSuggestion").clone();
+            filtredSuggestion.attr("id", null);
+            filtredSuggestion.html(filtredList[i]);
+            $("#suggestions").prepend(filtredSuggestion);
         }
     })
 })

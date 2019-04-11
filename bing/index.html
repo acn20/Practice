@@ -9,8 +9,8 @@ ultimele 5 cautari de exemplu
 -cand dau refresh sa se puna cursorul automat in input
 -cand scriu o litera ma uit la lista de sugestii si iau toate cuv care incep cu litera aia, cand scriu urmatoarea litera ma uit la lista pe care am creat-o adineaori si iau din lista AIA cuvintele care raman
 -o sa am nevoie de o functie cu 2 parametri (text si lista) si returneaza alta lista (sugestiile filtrate)
-fac in searches cu clone fiecare element din history si din sugestii
-pun iconita de bing pe tab
+-fac in searches cu clone fiecare element din history si din sugestii
+-pun iconita de bing pe tab
 -->
 <html>
 
@@ -68,7 +68,13 @@ pun iconita de bing pe tab
                         <button id="searchButton"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
-                <p id="searches"></p>
+                <ul id="searches">
+                    <li id="searched"></li>
+                </ul>
+
+                <ul id="suggestions">
+                    <li id="filtredSuggestion"></li>
+                </ul>
             </div>
 
             <div id="lowerMain">
