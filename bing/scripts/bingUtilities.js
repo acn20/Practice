@@ -1,10 +1,9 @@
-let suggestions = ["How to stop a cold from coming", "What exercices are best", "When does the festival happen"];
-
+//FILTERED
 function filtredSuggestions(text, list) {
     var filteredSuggestionsList = [];
 
     for(var i = 0; i < list.length; i++) {
-        if(list[i].startsWith(text)) {
+        if(list[i].startsWith(text) || list[i].startsWith(text.toUpperCase())) {
             filteredSuggestionsList.push(list[i]);
         }
     }
