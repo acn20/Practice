@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url("img/panorama.jpg");
+    background-image: url("../img/panorama.jpeg");
     font-family: sans-serif;
     font-size: 14px;
 }
@@ -108,16 +108,21 @@ main a:visited, main a:link {
 }
 
 .info-buttons {
-    float: left;
+    float: right;
     width: 50px;
     height: 30px;
     opacity: 0.5;
     background: #000;
     margin-left: 10px;
+    margin-bottom: 20px;
     border: 1px solid #000;
     border-radius: 10px;
     line-height: 30px;
     text-align: center;
+}
+
+#info {
+    margin-left: 10px;
 }
 
 #footerContainer {
