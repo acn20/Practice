@@ -11,6 +11,7 @@ ultimele 5 cautari de exemplu
 -o sa am nevoie de o functie cu 2 parametri (text si lista) si returneaza alta lista (sugestiile filtrate)
 -fac in searches cu clone fiecare element din history si din sugestii
 -pun iconita de bing pe tab
+-10 panorame denumite de la 0 la 9 (toate jpg); cand dau refresh aleg una din ele sa o pun ca background (fac cu random)
 -->
 <html>
 
@@ -69,18 +70,29 @@ ultimele 5 cautari de exemplu
                     </div>
                 </div>
                 <ul id="searches">
-                    <li id="searched"></li>
+
                 </ul>
 
                 <ul id="suggestions">
-                    <li id="filtredSuggestion"></li>
+
+                </ul>
+
+                <ul id="templates">
+                    <li id="searched"></li>
+                    <li id="filteredSuggestion"></li>
                 </ul>
             </div>
 
             <div id="lowerMain">
-                <a href=""><div class="info-buttons"><i class="fas fa-angle-left"></i></div></a>
-                <a href=""><div class="info-buttons"><i class="fas fa-angle-right"></i></div></a>
-                <a href=""><div class="info-buttons"><i class="fas fa-map-marker-alt"></i><span id="info">Info</span></div></a>
+                <a href="">
+                    <div class="info-buttons"><i class="fas fa-angle-left"></i></div>
+                </a>
+                <a href="">
+                    <div class="info-buttons"><i class="fas fa-angle-right"></i></div>
+                </a>
+                <a href="" id="infoLink">
+                    <div id="infoButton"><i class="fas fa-map-marker-alt"></i><span id="infoSpan">Info</span></div>
+                </a>
             </div>
         </main>
     </div>

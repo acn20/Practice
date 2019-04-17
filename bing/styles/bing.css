@@ -1,8 +1,47 @@
 body {
     margin: 0;
-    background-image: url("../img/panorama.jpeg");
     font-family: sans-serif;
     font-size: 14px;
+}
+
+#zero {
+    background-image: url("../img/0.jpeg");
+}
+
+#one {
+    background-image: url("../img/1.jpeg");
+}
+
+#two {
+    background-image: url("../img/2.jpeg");
+}
+
+#three {
+    background-image: url("../img/3.jpeg");
+}
+
+#four {
+    background-image: url("../img/4.jpeg");
+}
+
+#five {
+    background-image: url("../img/5.jpeg");
+}
+
+#six {
+    background-image: url("../img/6.jpeg");
+}
+
+#seven {
+    background-image: url("../img/7.jpeg");
+}
+
+#eight {
+    background-image: url("../img/8.jpeg");
+}
+
+#nine {
+    background-image: url("../img/9.jpeg");
 }
 
 #dark {
@@ -108,21 +147,39 @@ main a:visited, main a:link {
 }
 
 .info-buttons {
-    float: right;
-    width: 50px;
+    width: 30px;
     height: 30px;
     opacity: 0.5;
     background: #000;
     margin-left: 10px;
     margin-bottom: 20px;
+    padding: 5px 10px;
     border: 1px solid #000;
     border-radius: 10px;
     line-height: 30px;
     text-align: center;
 }
 
-#info {
+#infoButton {
+    width: 50px;
+    height: 30px;
+    opacity: 0.5;
+    background: #000;
     margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#infoSpan {
+    margin-left: 10px;
+}
+
+#infoLink {
+    text-decoration: none;
 }
 
 #footerContainer {
@@ -150,10 +207,6 @@ footer ul {
     margin-right: 20px;
 }
 
-#searched {
-    display: none;
-}
-
-#filtredSuggestion {
+#templates {
     display: none;
 }
