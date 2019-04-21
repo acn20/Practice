@@ -1,5 +1,4 @@
-//FILTERED
-function filtredSuggestions(text, list) {
+function filteredSuggestions(text, list) {
     var filteredSuggestionsList = [];
 
     for(var i = 0; i < list.length; i++) {
