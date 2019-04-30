@@ -1,27 +1,24 @@
-/*Centreaza lista de filme pui
-Iar la fiecare film vreau așa
+/*Centreaza lista de filme
+Iar la fiecare film
 Întâi titlul
 Apoi pe următorul rand vrei avea asa: întâi descrierea, apoi imaginea
 Ambele pe același nivel cum ar veni
-Hmm, ok, pui
 
 Si tot acest div care contine un film să aiba lățimea cat 30% din ecran
 Cam
 
-Ai putea să începi să lucrezi și la un concept numit lazy loading pui
-Adica, pui???
+Ai putea să începi să lucrezi și la un concept numit lazy loading
 
-Da pui un concept simplu dar important
+un concept simplu dar important
 Înseamnă să încarci anumite date numai când ai nevoie de ele
 De exemplu tu in loc sa iei toate filmele de pe server
 Iei doar o parte
-Aa, ok, pui
 Doar pe primele
 
 Si atunci când vezi ca userul da scroll... Atunci iei restul
 De-aia ii spune lazy
 
-Ai terminat pui???
+Ai terminat
 Deci afișează doar 10 filme pe pagina
 Si sub lista de filme ai un buton Load More
 Când îl apesi trimiți un Get request la un endpoint pe care îl fac diseară
@@ -36,12 +33,6 @@ Prima pagina o iei de la server cand se încarcă
 A 2-a pagina o iei cand dai click pe buton
 Si la fel si următoarele
 Deci tu trebuie să știi pe ce pagina te afli
-Dar eu cand afisez doar primele 10 pun in acel for de la 0 la 9?
-
-Deocamdată da pui
-Dar next time vei știi ca privești fix 1
-10
-Deci nu trebuie să pui restricții speciale
 
 Când dai click pe un film din lista aia de filme, afișează o fereastră care conține informații despre acel film
 Pot fi aceleași informații pe care le ai deja pe pagina. Nu trebuie să fie informații noi
@@ -61,7 +52,6 @@ Si bazat pe id cauti filmul în variabila ta cu filme
 Si cand găsești filmul
 Pui datele din film în acel dialog
 Si afisezi
-Asta trb sa faci
 */
 $(function () {
 	var service = new MovieService();
@@ -106,7 +96,7 @@ $(function () {
 			}
 			pageIndex++;
 		})
-	});//e inchis totul, pui
+	});
 
 	// add an input to the page and a search button
 	// when you click search, you use the search function (in MovieService)

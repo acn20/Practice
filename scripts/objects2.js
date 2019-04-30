@@ -32,4 +32,3 @@ function readUsername() {
 function readPassword() {
 	// function that reads the password from the screen
 }
-//fa asta si cu function ca sa vad cum

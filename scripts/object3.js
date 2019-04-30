@@ -20,10 +20,6 @@ function meow() {
 var cat = new animal('Tom', 3, 15, meow);
 cat.makeSound = bark;
 
-//sa nu mai stergi, le vreau doar pe cele folosite
-//deci asta se face cu function, nu cu json, cu parola si cu userul
-//pai da dar la json trebuie petru catel si pisica sa scrii de fiecare data toate proprietatile
-
 function credentials(username, password) {
 	this.username = username;
 	this.password = password;
