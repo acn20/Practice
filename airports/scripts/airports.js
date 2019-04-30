@@ -1,24 +1,3 @@
-/*
-pui deci butonul de search
-nu-l face cu <button>
-ci fa-l cu <span> 😉
-si inputul cu textarea?
-
-<input>
-unde ai vazut tu vreodata search cu textarea? 🙂
-deci acel search button il faci cu <span>
-vreau sa-i pui border
-si sa aiba colturile rotunjite
-si sa aiba background albastru
-inclusiv border de aceeasi culoare
-si text alb
-alegi si tu un albastru frumos
-nu background-color: blue;
-hmm,ok, pui, adica fac eu un butonas frumos
-
-dia
-*/
-
 $(function () {
 	var service = new airportsService();
 	var tools = new airportsTools();

@@ -91,14 +91,11 @@ PROBLEMA REZOLVATA IN FISIERUL arrays1.js --> functia countElements
 
 trb sa folosesti dictionary
 ca sa numeri
-:-<
 
 dictionary = json = cam cum arata acel student
-m-am chinuit nu stiu cat la el..
 
 numai ca in loc de proprietatea name etc
-ti-am zis sa fol dictionary 🙂
-da, dar nush cum
+fol dictionary 🙂
 
 deci in loc de name de exemplu
 vei avea cate o proprietate pt fiecare element din array
@@ -110,12 +107,10 @@ vei folosi un json ceva de genul:
 }
 adica 7 apare o data, si 4 tot o data
 etc
-pai da dar nush cum sa numar
 
 deci faci un for pt fiecare element din array
 i -> 0, array.length
 si in acel for verifici daca in dictionary ai adaugat acea proprietate
-intra si tu live ca nu inteleg asa...
 
 if(dict[array[i]])
 deci
@@ -366,7 +361,6 @@ SquareArea()
 Și ca parametri primește lungime, lățime
 Respectiv latura pătratului
 Respectiv raza cercului
-😮 ok, pui
 Și fiecare funcție folosește formula pentru acea figură*/
 
 function area() {

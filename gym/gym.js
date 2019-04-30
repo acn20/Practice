@@ -1,11 +1,10 @@
-/*deci cerinta pt cand ai timp de exercitiu e urmatoarea pui
-faci acele AJAX requests pentru toate celelalte butoane care au ramas
+/*faci acele AJAX requests pentru toate celelalte butoane care au ramas
 si apoi la Register de exemplu
 daca requestul e successful, afisezi un span pe ecran in care scrie OK cu litere verzi
 iar daca e eroare, afisezi un span pe ecran in care scrie Error cu litere rosii
 acel span va fi afisat sub randul pe care ai acel input si button
 il pui intr-un div separat
-si faci la fel si pt celelalte 2 sectiuni pui*/
+si faci la fel si pt celelalte 2 sectiuni*/
 
 $(function () {
 	var rootUrl = "http://sampleapis20180514091454.azurewebsites.net/api/v1/gym/";
@@ -57,7 +56,6 @@ $(function () {
 				$("#successEnter").addClass("hidden");
 			}
 		})
-		// :)??? pune cursorul unde il pun eu si vezi
 	}
 
 	$("#exitBtn").click(function () {

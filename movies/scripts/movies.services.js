@@ -14,9 +14,9 @@ function MovieService() {
 				"movies": [
 					{
 						"id": "dsahjdisa"
-						// bla bla
+						// etc
 					}
-					// bla bla
+					// etc
 				]
 			}
 		*/

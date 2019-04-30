@@ -71,13 +71,10 @@ function countElements(list) {
 	
 	return counter;// countElements([1,2,4,2,1,1])
 //{1: 3, 2: 2, 4: 1} dia, dar de ce nu sunt unele sub altele? pai si eu daca vreau sa afisez in site cu spatiu?
-//a, dia, pui, este o sagetica
-//da, domne, ma uit
 // 0 == 0 -> true
 // "" == "" -> true
 // [] == [] -> false...de ce nu le repara nimeni?
 
-	// pai cum sa scriu sa verific? :( zi-mi si mie)
 //cum poate sa-ti dea null?
 // puteam sa scriu si cu cu cuvantul null?
 // 	if("") {
@@ -85,7 +82,7 @@ function countElements(list) {
 // 	} else {
 // 		console.log('write me if previous is false')
 // 	}
-// //aaa deci daca conditia din if e false imi executa doar else? dia
+// //aaa deci daca conditia din if e false imi executa doar else? da
 // 	// truthy sau falsy
 // 	// 0 -> false
 // 	// orice altceva -> true
@@ -97,7 +94,6 @@ function countElements(list) {
 // 	// 00000000000000100001000010001 -> "" - false
 // 	// 00000000000000000000000000000 -> null
 // 	// [] = true
-// // ok, pui, stai sa-mi pun perna sub fund :( ca ma doare) gata, pui/
 // //pai si atunci de unde stii ca e string??? daca nu exista //nu prea inteleg diferenta intre gol si nu exista, din mom ce in memorie ai zis ca tot exista
 // 	if(text) {
 // 		console.log('this is true');
